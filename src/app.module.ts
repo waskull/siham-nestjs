@@ -22,7 +22,7 @@ import { roles } from './app.roles';
     TypeOrmModule.forRootAsync({
       inject:[ConfigService],
       useFactory: (config: ConfigService) => ({
-        type: 'mysql',
+        type: 'postgres',
         host: config.get<string>(DATABASE_HOST),
         port: parseInt(config.get<string>(DATABASE_PORT), 10),
         username: config.get<string>(DATABASE_USERNAME),
