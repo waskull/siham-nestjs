@@ -24,7 +24,11 @@ export class UserController {
         if(!user) throw new NotFoundException('El Usuario no existe');
         return {user: user}
     }
-    @Auth()
+    @Auth({
+            possession: 'any',
+            action: 'create',
+            resource: AppResource.USER
+        })
     @Post()
     async create(@Body() dto:CreateUserDto){
         const user = await this.userService.findOne(dto.email);

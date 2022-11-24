@@ -32,7 +32,8 @@ import { roles } from './app.roles';
         autoLoadEntities: true,
         synchronize: true,
         logging: true,
-        logger: 'file'
+        logger: 'file',
+        extra: { ssl: true }
       })
     }),
     ConfigModule.forRoot({
