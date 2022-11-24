@@ -1,0 +1,680 @@
+[2022-11-24T22:10:28.601Z][QUERY]: SELECT VERSION() AS `version`
+[2022-11-24T22:10:28.624Z][QUERY]: START TRANSACTION
+[2022-11-24T22:10:28.632Z][QUERY]: SELECT DATABASE() AS `db_name`
+[2022-11-24T22:10:28.633Z][QUERY]: SELECT `TABLE_SCHEMA`, `TABLE_NAME` FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA` = 'siham3' AND `TABLE_NAME` = 'inventory' UNION SELECT `TABLE_SCHEMA`, `TABLE_NAME` FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA` = 'siham3' AND `TABLE_NAME` = 'order_items' UNION SELECT `TABLE_SCHEMA`, `TABLE_NAME` FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA` = 'siham3' AND `TABLE_NAME` = 'order' UNION SELECT `TABLE_SCHEMA`, `TABLE_NAME` FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA` = 'siham3' AND `TABLE_NAME` = 'item' UNION SELECT `TABLE_SCHEMA`, `TABLE_NAME` FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA` = 'siham3' AND `TABLE_NAME` = 'sale_items' UNION SELECT `TABLE_SCHEMA`, `TABLE_NAME` FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA` = 'siham3' AND `TABLE_NAME` = 'bill' UNION SELECT `TABLE_SCHEMA`, `TABLE_NAME` FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA` = 'siham3' AND `TABLE_NAME` = 'sale' UNION SELECT `TABLE_SCHEMA`, `TABLE_NAME` FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA` = 'siham3' AND `TABLE_NAME` = 'client' UNION SELECT `TABLE_SCHEMA`, `TABLE_NAME` FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA` = 'siham3' AND `TABLE_NAME` = 'company' UNION SELECT `TABLE_SCHEMA`, `TABLE_NAME` FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA` = 'siham3' AND `TABLE_NAME` = 'route' UNION SELECT `TABLE_SCHEMA`, `TABLE_NAME` FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA` = 'siham3' AND `TABLE_NAME` = 'user' UNION SELECT `TABLE_SCHEMA`, `TABLE_NAME` FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA` = 'siham3' AND `TABLE_NAME` = 'routes_companies'
+[2022-11-24T22:10:28.636Z][QUERY]: 
+                SELECT
+                    *
+                FROM
+                    `INFORMATION_SCHEMA`.`COLUMNS`
+                WHERE
+                    `TABLE_SCHEMA` = 'siham3'
+                    AND
+                    `TABLE_NAME` = 'inventory'
+                 UNION 
+                SELECT
+                    *
+                FROM
+                    `INFORMATION_SCHEMA`.`COLUMNS`
+                WHERE
+                    `TABLE_SCHEMA` = 'siham3'
+                    AND
+                    `TABLE_NAME` = 'order_items'
+                 UNION 
+                SELECT
+                    *
+                FROM
+                    `INFORMATION_SCHEMA`.`COLUMNS`
+                WHERE
+                    `TABLE_SCHEMA` = 'siham3'
+                    AND
+                    `TABLE_NAME` = 'order'
+                 UNION 
+                SELECT
+                    *
+                FROM
+                    `INFORMATION_SCHEMA`.`COLUMNS`
+                WHERE
+                    `TABLE_SCHEMA` = 'siham3'
+                    AND
+                    `TABLE_NAME` = 'item'
+                 UNION 
+                SELECT
+                    *
+                FROM
+                    `INFORMATION_SCHEMA`.`COLUMNS`
+                WHERE
+                    `TABLE_SCHEMA` = 'siham3'
+                    AND
+                    `TABLE_NAME` = 'sale_items'
+                 UNION 
+                SELECT
+                    *
+                FROM
+                    `INFORMATION_SCHEMA`.`COLUMNS`
+                WHERE
+                    `TABLE_SCHEMA` = 'siham3'
+                    AND
+                    `TABLE_NAME` = 'bill'
+                 UNION 
+                SELECT
+                    *
+                FROM
+                    `INFORMATION_SCHEMA`.`COLUMNS`
+                WHERE
+                    `TABLE_SCHEMA` = 'siham3'
+                    AND
+                    `TABLE_NAME` = 'sale'
+                 UNION 
+                SELECT
+                    *
+                FROM
+                    `INFORMATION_SCHEMA`.`COLUMNS`
+                WHERE
+                    `TABLE_SCHEMA` = 'siham3'
+                    AND
+                    `TABLE_NAME` = 'client'
+                 UNION 
+                SELECT
+                    *
+                FROM
+                    `INFORMATION_SCHEMA`.`COLUMNS`
+                WHERE
+                    `TABLE_SCHEMA` = 'siham3'
+                    AND
+                    `TABLE_NAME` = 'company'
+                 UNION 
+                SELECT
+                    *
+                FROM
+                    `INFORMATION_SCHEMA`.`COLUMNS`
+                WHERE
+                    `TABLE_SCHEMA` = 'siham3'
+                    AND
+                    `TABLE_NAME` = 'route'
+                 UNION 
+                SELECT
+                    *
+                FROM
+                    `INFORMATION_SCHEMA`.`COLUMNS`
+                WHERE
+                    `TABLE_SCHEMA` = 'siham3'
+                    AND
+                    `TABLE_NAME` = 'user'
+                 UNION 
+                SELECT
+                    *
+                FROM
+                    `INFORMATION_SCHEMA`.`COLUMNS`
+                WHERE
+                    `TABLE_SCHEMA` = 'siham3'
+                    AND
+                    `TABLE_NAME` = 'routes_companies'
+                
+[2022-11-24T22:10:28.636Z][QUERY]: SELECT * FROM (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'siham3'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'inventory'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'siham3'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'order_items'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'siham3'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'order'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'siham3'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'item'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'siham3'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'sale_items'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'siham3'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'bill'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'siham3'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'sale'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'siham3'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'client'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'siham3'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'company'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'siham3'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'route'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'siham3'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'user'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'siham3'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'routes_companies'
+            ) `kcu` WHERE `CONSTRAINT_NAME` = 'PRIMARY'
+[2022-11-24T22:10:28.636Z][QUERY]: 
+            SELECT
+                `SCHEMA_NAME`,
+                `DEFAULT_CHARACTER_SET_NAME` as `CHARSET`,
+                `DEFAULT_COLLATION_NAME` AS `COLLATION`
+            FROM `INFORMATION_SCHEMA`.`SCHEMATA`
+            
+[2022-11-24T22:10:28.636Z][QUERY]: 
+            SELECT
+                `s`.*
+            FROM (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`STATISTICS`
+                WHERE
+                    `TABLE_SCHEMA` = 'siham3'
+                    AND
+                    `TABLE_NAME` = 'inventory'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`STATISTICS`
+                WHERE
+                    `TABLE_SCHEMA` = 'siham3'
+                    AND
+                    `TABLE_NAME` = 'order_items'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`STATISTICS`
+                WHERE
+                    `TABLE_SCHEMA` = 'siham3'
+                    AND
+                    `TABLE_NAME` = 'order'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`STATISTICS`
+                WHERE
+                    `TABLE_SCHEMA` = 'siham3'
+                    AND
+                    `TABLE_NAME` = 'item'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`STATISTICS`
+                WHERE
+                    `TABLE_SCHEMA` = 'siham3'
+                    AND
+                    `TABLE_NAME` = 'sale_items'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`STATISTICS`
+                WHERE
+                    `TABLE_SCHEMA` = 'siham3'
+                    AND
+                    `TABLE_NAME` = 'bill'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`STATISTICS`
+                WHERE
+                    `TABLE_SCHEMA` = 'siham3'
+                    AND
+                    `TABLE_NAME` = 'sale'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`STATISTICS`
+                WHERE
+                    `TABLE_SCHEMA` = 'siham3'
+                    AND
+                    `TABLE_NAME` = 'client'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`STATISTICS`
+                WHERE
+                    `TABLE_SCHEMA` = 'siham3'
+                    AND
+                    `TABLE_NAME` = 'company'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`STATISTICS`
+                WHERE
+                    `TABLE_SCHEMA` = 'siham3'
+                    AND
+                    `TABLE_NAME` = 'route'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`STATISTICS`
+                WHERE
+                    `TABLE_SCHEMA` = 'siham3'
+                    AND
+                    `TABLE_NAME` = 'user'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`STATISTICS`
+                WHERE
+                    `TABLE_SCHEMA` = 'siham3'
+                    AND
+                    `TABLE_NAME` = 'routes_companies'
+            ) `s`
+            LEFT JOIN (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'siham3'
+                    AND
+                    `TABLE_NAME` = 'inventory'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'siham3'
+                    AND
+                    `TABLE_NAME` = 'order_items'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'siham3'
+                    AND
+                    `TABLE_NAME` = 'order'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'siham3'
+                    AND
+                    `TABLE_NAME` = 'item'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'siham3'
+                    AND
+                    `TABLE_NAME` = 'sale_items'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'siham3'
+                    AND
+                    `TABLE_NAME` = 'bill'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'siham3'
+                    AND
+                    `TABLE_NAME` = 'sale'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'siham3'
+                    AND
+                    `TABLE_NAME` = 'client'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'siham3'
+                    AND
+                    `TABLE_NAME` = 'company'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'siham3'
+                    AND
+                    `TABLE_NAME` = 'route'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'siham3'
+                    AND
+                    `TABLE_NAME` = 'user'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'siham3'
+                    AND
+                    `TABLE_NAME` = 'routes_companies'
+            ) `rc`
+                ON
+                    `s`.`INDEX_NAME` = `rc`.`CONSTRAINT_NAME`
+                    AND
+                    `s`.`TABLE_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA`
+            WHERE
+                `s`.`INDEX_NAME` != 'PRIMARY'
+                AND
+                `rc`.`CONSTRAINT_NAME` IS NULL
+            
+[2022-11-24T22:10:28.636Z][QUERY]: 
+            SELECT
+                `kcu`.`TABLE_SCHEMA`,
+                `kcu`.`TABLE_NAME`,
+                `kcu`.`CONSTRAINT_NAME`,
+                `kcu`.`COLUMN_NAME`,
+                `kcu`.`REFERENCED_TABLE_SCHEMA`,
+                `kcu`.`REFERENCED_TABLE_NAME`,
+                `kcu`.`REFERENCED_COLUMN_NAME`,
+                `rc`.`DELETE_RULE` `ON_DELETE`,
+                `rc`.`UPDATE_RULE` `ON_UPDATE`
+            FROM (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'siham3'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'inventory'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'siham3'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'order_items'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'siham3'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'order'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'siham3'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'item'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'siham3'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'sale_items'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'siham3'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'bill'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'siham3'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'sale'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'siham3'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'client'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'siham3'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'company'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'siham3'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'route'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'siham3'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'user'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'siham3'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'routes_companies'
+            ) `kcu`
+            INNER JOIN (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'siham3'
+                    AND
+                    `TABLE_NAME` = 'inventory'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'siham3'
+                    AND
+                    `TABLE_NAME` = 'order_items'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'siham3'
+                    AND
+                    `TABLE_NAME` = 'order'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'siham3'
+                    AND
+                    `TABLE_NAME` = 'item'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'siham3'
+                    AND
+                    `TABLE_NAME` = 'sale_items'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'siham3'
+                    AND
+                    `TABLE_NAME` = 'bill'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'siham3'
+                    AND
+                    `TABLE_NAME` = 'sale'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'siham3'
+                    AND
+                    `TABLE_NAME` = 'client'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'siham3'
+                    AND
+                    `TABLE_NAME` = 'company'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'siham3'
+                    AND
+                    `TABLE_NAME` = 'route'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'siham3'
+                    AND
+                    `TABLE_NAME` = 'user'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'siham3'
+                    AND
+                    `TABLE_NAME` = 'routes_companies'
+            ) `rc`
+                ON
+                    `rc`.`CONSTRAINT_SCHEMA` = `kcu`.`CONSTRAINT_SCHEMA`
+                    AND
+                    `rc`.`TABLE_NAME` = `kcu`.`TABLE_NAME`
+                    AND
+                    `rc`.`CONSTRAINT_NAME` = `kcu`.`CONSTRAINT_NAME`
+            
+[2022-11-24T22:10:28.653Z][QUERY]: SELECT VERSION() AS `version`
+[2022-11-24T22:10:28.658Z][QUERY]: SELECT * FROM `INFORMATION_SCHEMA`.`COLUMNS` WHERE `TABLE_SCHEMA` = 'siham3' AND `TABLE_NAME` = 'typeorm_metadata'
+[2022-11-24T22:10:28.665Z][QUERY]: ALTER TABLE `inventory` DROP FOREIGN KEY `FK_94f5cbcb5f280f2f30bd4a9fd90`
+[2022-11-24T22:10:28.668Z][QUERY]: ALTER TABLE `inventory` CHANGE `item_id` `item_id` int NULL
+[2022-11-24T22:10:28.670Z][QUERY]: ALTER TABLE `order_items` DROP FOREIGN KEY `FK_de591fd3dc04191ab115c03eab1`
+[2022-11-24T22:10:28.672Z][QUERY]: ALTER TABLE `order_items` DROP FOREIGN KEY `FK_145532db85752b29c57d2b7b1f1`
+[2022-11-24T22:10:28.673Z][QUERY]: ALTER TABLE `order_items` CHANGE `item_id` `item_id` int NULL
+[2022-11-24T22:10:28.675Z][QUERY]: ALTER TABLE `order_items` CHANGE `order_id` `order_id` int NULL
+[2022-11-24T22:10:28.677Z][QUERY]: ALTER TABLE `order` DROP FOREIGN KEY `FK_199e32a02ddc0f47cd93181d8fd`
+[2022-11-24T22:10:28.678Z][QUERY]: ALTER TABLE `order` CHANGE `user_id` `user_id` int NULL
+[2022-11-24T22:10:28.680Z][QUERY]: ALTER TABLE `sale_items` DROP FOREIGN KEY `FK_0e18dd713dec5c3bca8e8c2972c`
+[2022-11-24T22:10:28.682Z][QUERY]: ALTER TABLE `sale_items` DROP FOREIGN KEY `FK_c210a330b80232c29c2ad68462a`
+[2022-11-24T22:10:28.684Z][QUERY]: ALTER TABLE `sale_items` CHANGE `item_id` `item_id` int NULL
+[2022-11-24T22:10:28.685Z][QUERY]: ALTER TABLE `sale_items` CHANGE `sale_id` `sale_id` int NULL
+[2022-11-24T22:10:28.687Z][QUERY]: ALTER TABLE `bill` DROP FOREIGN KEY `FK_1cc360e4f07bf476352af6b1476`
+[2022-11-24T22:10:28.688Z][QUERY]: ALTER TABLE `bill` DROP FOREIGN KEY `FK_418af6c70ea7ea1817227cb1483`
+[2022-11-24T22:10:28.691Z][QUERY]: ALTER TABLE `bill` CHANGE `pay_code` `pay_code` text NULL
+[2022-11-24T22:10:28.692Z][QUERY]: ALTER TABLE `bill` CHANGE `sale_id` `sale_id` int NULL
+[2022-11-24T22:10:28.693Z][QUERY]: ALTER TABLE `bill` CHANGE `createdBy` `createdBy` int NULL
+[2022-11-24T22:10:28.695Z][QUERY]: ALTER TABLE `sale` DROP FOREIGN KEY `FK_f2ac9b019aa29ebcfaecf7bb3cc`
+[2022-11-24T22:10:28.697Z][QUERY]: ALTER TABLE `sale` DROP FOREIGN KEY `FK_a3f82cec1dac6638fba3e732530`
+[2022-11-24T22:10:28.699Z][QUERY]: ALTER TABLE `sale` CHANGE `client_id` `client_id` int NULL
+[2022-11-24T22:10:28.700Z][QUERY]: ALTER TABLE `sale` CHANGE `user_id` `user_id` int NULL
+[2022-11-24T22:10:28.702Z][QUERY]: ALTER TABLE `client` CHANGE `email` `email` varchar(50) NULL
+[2022-11-24T22:10:28.703Z][QUERY]: ALTER TABLE `client` CHANGE `phone` `phone` varchar(50) NULL
+[2022-11-24T22:10:28.704Z][QUERY]: ALTER TABLE `company` DROP FOREIGN KEY `FK_662b374a9e31f6470b58c668aea`
+[2022-11-24T22:10:28.706Z][QUERY]: ALTER TABLE `company` CHANGE `phone2` `phone2` varchar(50) NULL
+[2022-11-24T22:10:28.708Z][QUERY]: ALTER TABLE `company` CHANGE `client_id` `client_id` int NULL
+[2022-11-24T22:10:28.709Z][QUERY]: ALTER TABLE `route` DROP FOREIGN KEY `FK_797177a310ed69b8ede51c81a55`
+[2022-11-24T22:10:28.711Z][QUERY]: ALTER TABLE `route` CHANGE `description` `description` varchar(100) NULL
+[2022-11-24T22:10:28.712Z][QUERY]: ALTER TABLE `route` CHANGE `user_id` `user_id` int NULL
+[2022-11-24T22:10:28.714Z][QUERY]: ALTER TABLE `user` CHANGE `phone` `phone` varchar(255) NULL
+[2022-11-24T22:10:28.716Z][QUERY]: ALTER TABLE `inventory` ADD CONSTRAINT `FK_94f5cbcb5f280f2f30bd4a9fd90` FOREIGN KEY (`item_id`) REFERENCES `item`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
+[2022-11-24T22:10:28.732Z][QUERY]: ALTER TABLE `order_items` ADD CONSTRAINT `FK_de591fd3dc04191ab115c03eab1` FOREIGN KEY (`item_id`) REFERENCES `item`(`id`) ON DELETE SET NULL ON UPDATE CASCADE
+[2022-11-24T22:10:28.732Z][QUERY]: ALTER TABLE `order_items` ADD CONSTRAINT `FK_145532db85752b29c57d2b7b1f1` FOREIGN KEY (`order_id`) REFERENCES `order`(`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+[2022-11-24T22:10:28.761Z][QUERY]: ALTER TABLE `order` ADD CONSTRAINT `FK_199e32a02ddc0f47cd93181d8fd` FOREIGN KEY (`user_id`) REFERENCES `user`(`id`) ON DELETE SET NULL ON UPDATE CASCADE
+[2022-11-24T22:10:28.774Z][QUERY]: ALTER TABLE `sale_items` ADD CONSTRAINT `FK_0e18dd713dec5c3bca8e8c2972c` FOREIGN KEY (`item_id`) REFERENCES `item`(`id`) ON DELETE SET NULL ON UPDATE CASCADE
+[2022-11-24T22:10:28.774Z][QUERY]: ALTER TABLE `sale_items` ADD CONSTRAINT `FK_c210a330b80232c29c2ad68462a` FOREIGN KEY (`sale_id`) REFERENCES `sale`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
+[2022-11-24T22:10:28.803Z][QUERY]: ALTER TABLE `bill` ADD CONSTRAINT `FK_1cc360e4f07bf476352af6b1476` FOREIGN KEY (`sale_id`) REFERENCES `sale`(`id`) ON DELETE SET NULL ON UPDATE CASCADE
+[2022-11-24T22:10:28.803Z][QUERY]: ALTER TABLE `bill` ADD CONSTRAINT `FK_418af6c70ea7ea1817227cb1483` FOREIGN KEY (`createdBy`) REFERENCES `user`(`id`) ON DELETE SET NULL ON UPDATE CASCADE
+[2022-11-24T22:10:28.842Z][QUERY]: ALTER TABLE `sale` ADD CONSTRAINT `FK_f2ac9b019aa29ebcfaecf7bb3cc` FOREIGN KEY (`client_id`) REFERENCES `client`(`id`) ON DELETE SET NULL ON UPDATE CASCADE
+[2022-11-24T22:10:28.842Z][QUERY]: ALTER TABLE `sale` ADD CONSTRAINT `FK_a3f82cec1dac6638fba3e732530` FOREIGN KEY (`user_id`) REFERENCES `user`(`id`) ON DELETE SET NULL ON UPDATE CASCADE
+[2022-11-24T22:10:28.871Z][QUERY]: ALTER TABLE `company` ADD CONSTRAINT `FK_662b374a9e31f6470b58c668aea` FOREIGN KEY (`client_id`) REFERENCES `client`(`id`) ON DELETE SET NULL ON UPDATE CASCADE
+[2022-11-24T22:10:28.884Z][QUERY]: ALTER TABLE `route` ADD CONSTRAINT `FK_797177a310ed69b8ede51c81a55` FOREIGN KEY (`user_id`) REFERENCES `user`(`id`) ON DELETE SET NULL ON UPDATE CASCADE
+[2022-11-24T22:10:28.897Z][QUERY]: COMMIT
