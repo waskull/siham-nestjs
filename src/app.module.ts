@@ -33,7 +33,6 @@ import { roles } from './app.roles';
         synchronize: true,
         logging: true,
         logger: 'file',
-        extra: { ssl: true }
       })
     }),
     ConfigModule.forRoot({

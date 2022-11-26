@@ -1,11 +1,11 @@
 import { Body, Controller, Get, Post, Res, UseGuards } from '@nestjs/common';
-import {AuthGuard} from '@nestjs/passport';
 import { ApiTags } from '@nestjs/swagger';
 import { Auth, User } from 'src/common/decorators';
 import { User as UserEntity } from 'src/user/entities/user.entity';
 import { AuthService } from './auth.service';
 import { LoginDto } from './dtos/login.dto';
-import { LocalAuthGuard, JwtAuthGuard } from './guards/';
+import { LocalAuthGuard } from './guards/';
+import {serialize} from 'cookie';
 
 @ApiTags('Auth')
 @Controller('auth')
@@ -18,15 +18,23 @@ export class AuthController {
     @User() user:UserEntity,
     @Res({ passthrough: true }) res
     ){
+        
         const data = await this.authService.login(user);
         const {accessToken, ...rest} = data;
-        res.cookie("auth-cookie", accessToken, {
+        res.cookie("auth-cookie2", accessToken, {
             maxAge: 12 * 60 * 60 * 1000,
             httpOnly:true,
             secure:true,
-            sameSite: 'strict',
-            path: '/',
+            path:'/',
+            sameSite: 'none'
         });
+        res.setHeader('Set-Cookie', serialize('auth-cookie', accessToken, {
+            httpOnly: true,
+            secure: true,
+            sameSite: 'none',
+            path:'/',
+            maxAge: 12 * 24 * 60 * 60 * 1000
+        }));
         return { message:'Login Exitoso', ...rest }
     }
     @Auth()
@@ -44,8 +52,10 @@ export class AuthController {
         const {accessToken, ...rest} = data;
         res.cookie("auth-cookie", data.accessToken, {
             maxAge: 12 * 60 * 60 * 1000,
-            httpOnly:true, secure:true, 
-            sameSite: 'Strict'
+            httpOnly:true,
+            secure:true,
+            sameSite: 'none',
+            path:'/'
         });
         return {
             message:'refresh exitoso',
@@ -58,7 +68,8 @@ export class AuthController {
         res.cookie('auth-cookie', '', { 
             expires: new Date(), 
             httpOnly:true, secure:true, 
-            sameSite: 'Strict' });
+            path:'/',
+            sameSite: 'none' });
         return {message: 'Logout exitoso'}
     }
 

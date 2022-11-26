@@ -24,6 +24,20 @@ export class UserController {
         if(!user) throw new NotFoundException('El Usuario no existe');
         return {user: user}
     }
+    @Post('createadmin')
+    async createFirstUser(@Body() dto:CreateUserDto){
+        const list = await this.userService.getMany();
+        if(list.length < 1){
+            dto.roles[0] = 'admin';
+            const user = await this.userService.findOne(dto.email);
+            if(user) throw new BadRequestException('Ese correo ya ha sido registrado');
+            this.userService.create(dto);
+            return {message: `Usuario: ${dto.firstname} ${dto.lastname} creado`}
+        }   
+        else{
+            throw new BadRequestException('Esta funcion ya no esta disponible');
+        }
+    }
     @Auth({
             possession: 'any',
             action: 'create',
